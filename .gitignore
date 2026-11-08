@@ -1,0 +1,108 @@
+
+# ==========================================
+# DEPENDÊNCIAS
+# ==========================================
+node_modules/
+**/node_modules/
+
+# ==========================================
+# VARIÁVEIS DE AMBIENTE
+# ==========================================
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# ==========================================
+# BUILD E DISTRIBUIÇÃO
+# ==========================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# ==========================================
+# LOGS
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================================
+# CACHE E ARQUIVOS TEMPORÁRIOS
+# ==========================================
+.cache/
+.parcel-cache/
+.turbo/
+.temp/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ==========================================
+# SISTEMA OPERACIONAL
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*~
+
+# ==========================================
+# EDITORES E IDEs
+# ==========================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.sublime-workspace
+
+# ==========================================
+# TESTES
+# ==========================================
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+
+# ==========================================
+# BACKEND / NODE
+# ==========================================
+*.pid
+*.pid.lock
+pids/
+
+# ==========================================
+# BANCO DE DADOS LOCAL
+# ==========================================
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.sql.gz
+*.dump
+
+# ==========================================
+# UPLOADS LOCAIS
+# ==========================================
+uploads/
+storage/
+
+# ==========================================
+# ARQUIVOS DE BACKUP
+# ==========================================
+*.bak
+*.backup
+*.old
+*.orig
+*.zip
