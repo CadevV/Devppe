@@ -1,9 +1,12 @@
 import express from "express";
 import cors from "cors";
+import bycrypt from "bcrypt";
+import pool from "./db/pool.js";
 import 'dotenv/config';
 
 const app = express();
 const port = process.env.PORT || 3000;
+const saltRounds = process.env.HASH || 12
 
 app.use(cors());
 app.use(express.json());

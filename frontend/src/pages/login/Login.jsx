@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPass, setShowpass] = useState("password");
@@ -22,7 +23,7 @@ const Login = () => {
   };
 
   const sendPass = () => {
-    console.log(pass, name);
+    
   };
 
   return (
@@ -69,15 +70,17 @@ const Login = () => {
             <div>
               <button
                 onClick={sendPass}
-                className="cursor-pointer text-white uppercase rounded-md p-2 bg-blue-700"
+                className="cursor-pointer text-white uppercase rounded-md p-2 bg-blue-700 transition ease-in-out shadow-2xl hover:shadow-none hover:translate-y-1"
               >
                 Entrar
               </button>
             </div>
-
           </div>
 
-          <p>ainda sem conta? Clique <span className="text-blue-500 cursor-pointer">Aqui</span></p>
+          <p>
+            ainda sem conta? Clique{" "}
+            <span className="text-blue-500 cursor-pointer"><Link to={"/cadastro"}>Aqui</Link></span>
+          </p>
         </div>
       </div>
     </>
