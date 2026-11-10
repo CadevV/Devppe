@@ -59,9 +59,9 @@ const Login = () => {
                 onClick={showPassInput}
               >
                 {showPass === "password" ? (
-                  <i class="bi bi-eye"></i>
+                  <i className="bi bi-eye"></i>
                 ) : (
-                  <i class="bi bi-eye-slash"></i>
+                  <i className="bi bi-eye-slash"></i>
                 )}
               </button>
             </div>
