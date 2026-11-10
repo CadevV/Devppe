@@ -6,6 +6,7 @@ const Cadastrar = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [passConfirm, setPassConfirm] = useState("");
 
   const showPassInput = () => {
     if (showPass === "password") {
@@ -21,15 +22,17 @@ const Cadastrar = () => {
 
   const getEmail = (e) => {
     setEmail(e.target.value);
-  }
+  };
 
   const getPass = (e) => {
     setPass(e.target.value);
   };
 
-  const sendPass = () => {
-    
+  const getPassConfirm = (e) => {
+    setPassConfirm(e.target.value);
   };
+
+  const sendPass = () => {};
 
   return (
     <>
@@ -50,7 +53,7 @@ const Cadastrar = () => {
                 onChange={getEmail}
               />
             </div>
-            
+
             <div>
               <input
                 type="text"
@@ -63,21 +66,21 @@ const Cadastrar = () => {
 
             <div>
               <input
-                type={showPass}
+                type = "password"
                 placeholder="Crie sua senha"
                 className="outline-0 border-b-2 p-0.5"
                 onChange={getPass}
                 value={pass}
               />
             </div>
-            
+
             <div className="relative">
               <input
                 type={showPass}
                 placeholder="Confirme a senha"
                 className="outline-0 border-b-2 p-0.5"
-                onChange={getPass}
-                value={pass}
+                onChange={getPassConfirm}
+                value={passConfirm}
               />
               <button
                 aria-label="Ver Senha"
@@ -104,7 +107,9 @@ const Cadastrar = () => {
 
           <p>
             já tem conta? Clique {""}
-            <span className="text-blue-500 cursor-pointer"><Link to={"/login"}>Aqui</Link></span>
+            <span className="text-blue-500 cursor-pointer">
+              <Link to={"/login"}>Aqui</Link>
+            </span>
           </p>
         </div>
       </div>

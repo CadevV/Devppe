@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import bycrypt from "bcrypt";
+import bcrypt from "bcrypt";
 import pool from "./db/pool.js";
 import 'dotenv/config';
 
