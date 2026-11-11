@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { cadastroApi } from "../../services/api";
 
 const Cadastrar = () => {
   const [showPass, setShowpass] = useState("password");
@@ -32,7 +33,9 @@ const Cadastrar = () => {
     setPassConfirm(e.target.value);
   };
 
-  const sendPass = () => {};
+  const sendPass = async () => {
+    await cadastroApi(email, name, pass)
+  };
 
   return (
     <>

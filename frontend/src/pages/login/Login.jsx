@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { loginApi } from "../../services/api";
 
 const Login = () => {
   const [showPass, setShowpass] = useState("password");
@@ -23,7 +24,7 @@ const Login = () => {
   };
 
   const sendPass = () => {
-    
+    loginApi(name, pass)
   };
 
   return (
