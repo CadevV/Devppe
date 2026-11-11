@@ -1,9 +1,11 @@
 const home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <section className="h-screen">
+        <h2>Popular</h2>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default home
+export default home;

@@ -19,13 +19,15 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Menu />
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/cadastro" element={<Cadastrar />} />
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<h1>Pagina não encontrada 404</h1>} />
-        </Routes>
+        <div className="bg-gray-300">
+          <Menu />
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/cadastro" element={<Cadastrar />} />
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<h1>Pagina não encontrada 404</h1>} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   );

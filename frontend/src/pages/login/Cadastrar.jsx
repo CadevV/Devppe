@@ -39,7 +39,7 @@ const Cadastrar = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-200 gap-2.5">
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 gap-2.5">
         <div className="bg-gray-50 h-96 w-sm flex flex-col items-center justify-center rounded-2xl shadow-2xl gap-3">
           <div className="flex flex-col items-center gap-1">
             <h1 className="text-2xl">Criar Conta</h1>
