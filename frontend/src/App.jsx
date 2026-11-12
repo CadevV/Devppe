@@ -6,6 +6,7 @@ import Login from "./pages/login/Login.jsx";
 import Cadastrar from "./pages/login/Cadastrar.jsx";
 import Home from "./pages/home/Home.jsx";
 import Menu from "./components/Menu.jsx";
+import PageProduto from "./pages/home/components/PageProduto.jsx";
 
 function App() {
   useEffect(() => {
@@ -22,9 +23,10 @@ function App() {
         <div className="bg-gray-300">
           <Menu />
           <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/produto/:id" element={<PageProduto />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastrar />} />
-            <Route path="/" element={<Home />} />
             <Route path="*" element={<h1>Pagina não encontrada 404</h1>} />
           </Routes>
         </div>

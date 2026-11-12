@@ -29,7 +29,7 @@ const Menu = () => {
             </button>
 
             <button className="relative cursor-pointer border rounded-full w-7 aspect-square after:absolute after:inset-0 after:border-t after:border-t-blue-500 after:rounded-full after:opacity-0 hover:after:opacity-100 hover:after:rotate-180 after:transition-all after:ease-in-out after: duration-1000">
-              <i class="bi bi-gear-fill"></i>
+              <i className="bi bi-gear-fill"></i>
             </button>
           </div>
         </div>
