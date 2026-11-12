@@ -6,8 +6,8 @@ const Menu = () => {
 
   return (
     <>
-      <header className="flex w-11/12 m-auto gap-4 pt-2">
-        <div className="shadow-lg w-3/4 p-2 flex justify-between items-center rounded-2xl bg-gray-50">
+      <header className="flex w-11/12 m-auto gap-4 pt-2 max-md:items-center max-md:flex-col max-md:w-full">
+        <div className="shadow-lg w-3/4 p-2 flex justify-between items-center rounded-2xl bg-gray-50 max-md:w-11/12">
           <h1 className="text-2xl uppercase">
             <span className="text-blue-700 text-3xl">
               D<span className="text-2xl">EV</span>
@@ -19,11 +19,11 @@ const Menu = () => {
             <button className="relative inline-flex items-center justify-center cursor-pointer border rounded-full w-7 aspect-square after:absolute after:inset-0 after:rounded-full after:border-t after:border-t-blue-500 after:opacity-0 after:pointer-events-none after:transition-all after:duration-1000 after:ease-in-out hover:after:opacity-100 hover:after:rotate-180">
               {home ? (
                 <Link to={"/login"}>
-                  <i class="bi bi-person-fill"></i>
+                  <i className="bi bi-person-fill"></i>
                 </Link>
               ) : (
                 <Link to={"/"}>
-                  <i class="bi bi-house-door-fill"></i>
+                  <i className="bi bi-house-door-fill"></i>
                 </Link>
               )}
             </button>
@@ -34,7 +34,7 @@ const Menu = () => {
           </div>
         </div>
 
-        <div className="shadow-lg w-1/4 p-2 flex justify-between items-center rounded-2xl bg-gray-50">
+        <div className="shadow-lg w-1/4 p-2 flex justify-between items-center rounded-2xl bg-gray-50 max-md:w-3/4">
           <div className="relative w-3/4 m-auto">
             <input type="text" className="border-b w-full outline-0" />
             <button className="absolute right-0 cursor-pointer">
