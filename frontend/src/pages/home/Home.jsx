@@ -14,9 +14,12 @@ const Home = () => {
         <h2 className="text-4xl text-center">Inicial</h2>
 
         <div className="flex flex-wrap gap-2 justify-center items-center">
-          {test.map((el) => (
-            <Produto key={el.id} nome={el.title} id = {el.id} />
-          ))}
+          {test.length > 0
+            ? test.map((el) => (
+                <Produto key={el.id} nome={el.title} id={el.id} />
+              ))
+            : <h2>Nenhum produto encontrado</h2>
+            }
         </div>
       </section>
     </>

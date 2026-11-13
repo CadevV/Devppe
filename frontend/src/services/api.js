@@ -2,7 +2,7 @@ const URL_BASE = "http://localhost:3000";
 
 export async function cadastroApi(email, name, password) {
   try {
-    await fetch(`${URL_BASE}/cadastro`, {
+    const resposta = await fetch(`${URL_BASE}/cadastro`, {
       method: "POST",
 
       headers: {
@@ -12,7 +12,9 @@ export async function cadastroApi(email, name, password) {
       body: JSON.stringify({ email, name, password }),
     });
 
-    return true;
+    const dados = await resposta.json()
+
+    return dados;
   } catch (error) {
     console.log(error);
   }
@@ -20,7 +22,7 @@ export async function cadastroApi(email, name, password) {
 
 export async function loginApi(name, password) {
   try {
-    await fetch(`${URL_BASE}/login`, {
+    const resposta = await fetch(`${URL_BASE}/login`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
@@ -29,7 +31,9 @@ export async function loginApi(name, password) {
       }),
     });
 
-    return true;
+    const dados = resposta.json()
+    
+    return dados;
   } catch (error) {
     console.log("Erro: " + error);
   }

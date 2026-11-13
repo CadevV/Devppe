@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { loginApi } from "../../services/api";
+import { loginApi } from "../../services/api.js";
 
 const Login = () => {
   const [showPass, setShowpass] = useState("password");
@@ -23,8 +23,10 @@ const Login = () => {
     setPass(e.target.value);
   };
 
-  const sendPass = () => {
-    loginApi(name, pass)
+  const sendPass = async () => {
+    const resposta = await loginApi(name, pass)
+
+    console.log(resposta)
   };
 
   return (
@@ -69,12 +71,13 @@ const Login = () => {
             </div>
 
             <div>
-              <button
+              <Link
+                to={""}
                 onClick={sendPass}
                 className="cursor-pointer text-white uppercase rounded-md p-2 bg-blue-700 transition ease-in-out shadow-2xl hover:shadow-none hover:translate-y-1"
               >
                 Entrar
-              </button>
+              </Link>
             </div>
           </div>
 

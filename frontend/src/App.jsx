@@ -7,6 +7,7 @@ import Cadastrar from "./pages/login/Cadastrar.jsx";
 import Home from "./pages/home/Home.jsx";
 import Menu from "./components/Menu.jsx";
 import PageProduto from "./pages/home/components/PageProduto.jsx";
+import SellerHome from "./pages/vendedor/SellerHome.jsx";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
           <Menu />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/homeSeller" element={<SellerHome />} />
             <Route path="/produto/:id" element={<PageProduto />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastrar />} />

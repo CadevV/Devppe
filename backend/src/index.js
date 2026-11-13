@@ -56,20 +56,20 @@ app.post("/login", async (req, res) => {
 
   const dados = resultado.data;
 
-  const consulta = await pool.query("SELECT * FROM tbUser WHERE name = $1,", [
+  const consulta = await pool.query("SELECT * FROM tbUser WHERE name = $1", [
     dados.name,
   ]);
-
-  const usuario = consulta.rows[0]
 
   if (consulta.rowCount === 0) {
     return res.status(404).json({ error: "Usuario não encontrado" });
   }
 
+  const usuario = consulta.rows[0];
+
   const verificarSenha = await bcrypt.compare(dados.password, usuario.hash);
 
-  if(!verificarSenha){
-    return res.status(400).json({Senha: "Incorreta"})
+  if (!verificarSenha) {
+    return res.status(400).json({ Senha: "Incorreta" });
   }
 });
 

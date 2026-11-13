@@ -31,9 +31,15 @@ const Menu = () => {
             <button className="relative cursor-pointer border rounded-full w-7 aspect-square after:absolute after:inset-0 after:border-t after:border-t-blue-500 after:rounded-full after:opacity-0 hover:after:opacity-100 hover:after:rotate-180 after:transition-all after:ease-in-out after: duration-1000">
               <i className="bi bi-gear-fill"></i>
             </button>
+
+            <Link
+              to={"/homeSeller"}
+              className="relative flex items-center justify-center cursor-pointer border rounded-full w-7 aspect-square after:absolute after:inset-0 after:border-t after:border-t-blue-500 after:rounded-full after:opacity-0 hover:after:opacity-100 hover:after:rotate-180 after:transition-all after:ease-in-out after: duration-1000"
+            >
+              <i className="bi bi-clipboard-data-fill"></i>
+            </Link>
           </div>
         </div>
-
         <div className="shadow-lg w-1/4 p-2 flex justify-between items-center rounded-2xl bg-gray-50 max-md:w-3/4">
           <div className="relative w-3/4 m-auto">
             <input type="text" className="border-b w-full outline-0" />

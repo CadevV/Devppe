@@ -34,6 +34,11 @@ const Cadastrar = () => {
   };
 
   const sendPass = async () => {
+    if(pass === passConfirm) {
+      console.log("Senha não condiz")
+      return 
+    }
+
     await cadastroApi(email, name, pass)
   };
 
