@@ -71,6 +71,10 @@ app.post("/login", async (req, res) => {
   if (!verificarSenha) {
     return res.status(400).json({ Senha: "Incorreta" });
   }
+
+  return res.status(200).json({
+    message: "Credenciais válidas",
+  });
 });
 
 app.get("/health", (req, res) => {

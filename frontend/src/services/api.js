@@ -12,7 +12,11 @@ export async function cadastroApi(email, name, password) {
       body: JSON.stringify({ email, name, password }),
     });
 
-    const dados = await resposta.json()
+    if (!resposta.ok) {
+      throw new Error("Erro na comunicação com o servidor");
+    }
+
+    const dados = await resposta.json();
 
     return dados;
   } catch (error) {
@@ -31,8 +35,12 @@ export async function loginApi(name, password) {
       }),
     });
 
-    const dados = resposta.json()
-    
+    if (!resposta.ok) {
+      throw new Error("Erro na comunicação com o servidor");
+    }
+
+    const dados = resposta.json();
+
     return dados;
   } catch (error) {
     console.log("Erro: " + error);

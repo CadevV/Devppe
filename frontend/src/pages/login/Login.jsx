@@ -24,26 +24,26 @@ const Login = () => {
   };
 
   const sendPass = async () => {
-    const resposta = await loginApi(name, pass)
+    const resposta = await loginApi(name, pass);
 
-    console.log(resposta)
+    console.log(resposta);
   };
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 gap-2.5">
-        <div className="bg-gray-50 h-96 w-sm flex flex-col items-center justify-center rounded-2xl shadow-2xl gap-3">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-2.5 py-2">
+        <div className="flex h-96 w-sm flex-col items-center justify-center gap-3 rounded-2xl bg-gray-50 shadow-2xl">
           <div className="flex flex-col items-center gap-1">
             <h1 className="text-2xl">Fazer Login</h1>
             <p className="text-xs">Bem Vindo de Volta</p>
           </div>
 
-          <div className="flex-1 flex flex-col gap-5 items-center justify-center">
+          <div className="flex flex-1 flex-col items-center justify-center gap-5">
             <div>
               <input
                 type="text"
                 placeholder="Entre com seu nome de usuario"
-                className="outline-0 border-b-2 p-0.5"
+                className="border-b-2 p-0.5 outline-0"
                 value={name}
                 onChange={getName}
               />
@@ -53,7 +53,7 @@ const Login = () => {
               <input
                 type={showPass}
                 placeholder="Entre com sua senha"
-                className="outline-0 border-b-2 p-0.5"
+                className="border-b-2 p-0.5 outline-0"
                 onChange={getPass}
                 value={pass}
               />
@@ -74,7 +74,7 @@ const Login = () => {
               <Link
                 to={""}
                 onClick={sendPass}
-                className="cursor-pointer text-white uppercase rounded-md p-2 bg-blue-700 transition ease-in-out shadow-2xl hover:shadow-none hover:translate-y-1"
+                className="cursor-pointer rounded-md bg-blue-700 p-2 text-white uppercase shadow-2xl transition ease-in-out hover:translate-y-1 hover:shadow-none"
               >
                 Entrar
               </Link>
@@ -83,7 +83,9 @@ const Login = () => {
 
           <p>
             ainda sem conta? Clique{" "}
-            <span className="text-blue-500 cursor-pointer"><Link to={"/cadastro"}>Aqui</Link></span>
+            <span className="cursor-pointer text-blue-500">
+              <Link to={"/cadastro"}>Aqui</Link>
+            </span>
           </p>
         </div>
       </div>
